@@ -2,8 +2,8 @@
 My first node.js app
 
 
-#For CSS run 
+# For CSS run 
 npm run build-css
 
-#To start appilcation
+# To start appilcation
 npm run start
