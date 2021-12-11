@@ -1,0 +1,27 @@
+{
+  "name": "project-test",
+  "version": "1.0.0",
+  "description": "Testing node",
+  "main": "server.js",
+  "scripts": {
+    "build-css": "tailwind build -i src/css/index.css -o public/css/index.css",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  }
+}

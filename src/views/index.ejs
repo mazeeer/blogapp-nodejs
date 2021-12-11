@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./components/meta.ejs") %> 
+<body class="bg-gray-100 font-readex " >
+    <%- include("./components/Navbar.ejs") %> 
+
+    <section class="mx-auto md:container mb-28 mt-10" >
+        <% if(results.length > 1){ %> 
+            <div class="grid grid-rows-1 gap-4" >
+                <% results.forEach( item => { %>
+                    <div class="bg-white p-4 rounded">
+                        <a href="/blog/<%= item.id %> "><h1 class="text-2xl"><%= item.title %> </h1></a>
+                        <div><%= item.snippet %> ...</div>
+                        <div class="flex flex-grow justify-end text-sm" >
+                            <p><span class="text-gray-500" >Author: </span> <%= item.author %> | <span class="text-gray-500" >Date : </span> <%= moment(item.updatedAt).format('ll'); %> </p> 
+                        </div>
+                    </div>
+                <% });%> 
+            </div>
+        <% } %>
+    </section>
+    <%- include("./components/footer.ejs") %> 
+</body>
+</html>
