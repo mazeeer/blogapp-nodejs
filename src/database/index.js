@@ -6,8 +6,7 @@ const dbConnection = (app) => {
     let dbURI = process.env.DB_CONNECTION;
     mongoose.connect(dbURI,{ useNewUrlParser: true, useUnifiedTopology:true  })
     .then((res)=>{ 
-        console.log("connected to db")
-        app.listen(3000);
+        app.listen(80);
     })
     .catch((err) =>{
     console.log(err)
