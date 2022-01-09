@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 //static files
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public'));
 
 //routes
 app.use(router)
