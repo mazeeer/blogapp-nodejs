@@ -6,7 +6,7 @@ const dbConnection = (app) => {
     let dbURI = process.env.DB_CONNECTION;
     mongoose.connect(dbURI,{ useNewUrlParser: true, useUnifiedTopology:true  })
     .then((res)=>{ 
-        let port = process.env.PORT || 8000;
+        let port = process.env.PORT || 3000;
         app.listen(port);
     })
     .catch((err) =>{
